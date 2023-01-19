@@ -90,7 +90,7 @@ public class OhMyVanillaMinecraft implements ModInitializer {
         CommandRegistrationCallback.EVENT.register(new CommandRegistrationCallback() {
             @Override
             public void register(CommandDispatcher<ServerCommandSource> commandDispatcher, boolean b) {
-                commandDispatcher.register(CommandManager.literal("omvm").executes(new Command<ServerCommandSource>() {
+                commandDispatcher.register(CommandManager.literal("omvm").requires(source -> source.hasPermissionLevel(4)).executes(new Command<ServerCommandSource>() {
                     @Override
                     public int run(CommandContext<ServerCommandSource> context) throws CommandSyntaxException {
                         String text = getConfigurationString();
@@ -109,6 +109,7 @@ public class OhMyVanillaMinecraft implements ModInitializer {
             @Override
             public void register(CommandDispatcher<ServerCommandSource> commandDispatcher, boolean b) {
                 commandDispatcher.register(CommandManager.literal("omvm")
+                        .requires(source -> source.hasPermissionLevel(4))
                         .then(CommandManager.literal("set")
                                 .then(CommandManager.argument("key", StringArgumentType.word())
                                         .suggests(new SuggestionProvider<ServerCommandSource>() {

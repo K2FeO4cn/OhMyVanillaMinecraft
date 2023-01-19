@@ -5,11 +5,12 @@
   "name": "Oh My Vanilla Minecraft",
   "description": "What's wrong with my Minecraft?",
   "authors": [
-    "trueKeuin"
+    "trueKeuin",
+    "K2FeO4"
   ],
   "contact": {
     "homepage": "https://www.keuin.cc",
-    "sources": "https://github.com/keuin/OhMyVanillaMinecraft"
+    "sources": "https://github.com/K2FeO4cn/OhMyVanillaMinecraft"
   },
   "license": "MIT",
   "icon": "assets/ohmyvanillamc/icon.png",
